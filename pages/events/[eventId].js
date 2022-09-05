@@ -1,17 +1,17 @@
 import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 
-/* import { getEventById } from '../../dummy-data';
+import { getEventById } from '../../dummy-data';
 import EventSummary from '../../components/event-detail/event-summary';
 import EventLogistics from '../../components/event-detail/event-logistics';
 import EventContent from '../../components/event-detail/event-content';
-import ErrorAlert from '../../components/ui/error-alert'; */
+import ErrorAlert from '../../components/ui/error-alert';
 
 function EventDetailPage() {
   const router = useRouter();
 
   const eventId = router.query.eventId;
-  /*  const event = getEventById(eventId);
+  const event = getEventById(eventId);
 
   if (!event) {
     return (
@@ -19,12 +19,11 @@ function EventDetailPage() {
         <p>No event found!</p>
       </ErrorAlert>
     );
-  } */
+  }
 
   return (
     <Fragment>
-      EventId
-      {/*  <EventSummary title={event.title} />
+      <EventSummary title={event.title} />
       <EventLogistics
         date={event.date}
         address={event.location}
@@ -33,7 +32,7 @@ function EventDetailPage() {
       />
       <EventContent>
         <p>{event.description}</p>
-      </EventContent> */}
+      </EventContent>
     </Fragment>
   );
 }
